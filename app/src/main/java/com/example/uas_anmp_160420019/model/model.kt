@@ -1,4 +1,4 @@
-package com.yongky.hobbyapp.model
+package com.example.uas_anmp_160420019.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

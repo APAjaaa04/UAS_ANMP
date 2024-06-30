@@ -1,12 +1,12 @@
-package com.yongky.hobbyapp.model
+package com.example.uas_anmp_160420019.model
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
-import com.yongky.hobbyapp.util.DB_NAME
-import com.yongky.hobbyapp.util.MIGRATION_1_2
+import com.example.uas_anmp_160420019.util.DB_NAME
+import com.example.uas_anmp_160420019.util.MIGRATION_1_2
 
 @Database(entities = arrayOf(User::class, News::class), version =  2)
 abstract class HobbyDatabase: RoomDatabase() {

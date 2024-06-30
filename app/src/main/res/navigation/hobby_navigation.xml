@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hobby_navigation"
+    app:startDestination="@id/itemNews">
+
+    <fragment
+        android:id="@+id/itemNews"
+        android:name="com.example.uas_anmp_160420019.view.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/actionDetailNews"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNewsFragment"
+        android:name="com.example.uas_anmp_160420019.view.DetailNewsFragment"
+        android:label="fragment_detail_news"
+        tools:layout="@layout/fragment_detail_news" >
+        <action
+            android:id="@+id/actionNewsFragment"
+            app:destination="@id/itemNews" />
+        <argument
+            android:name="idNews"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemUser"
+        android:name="com.example.uas_anmp_160420019.view.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/actionGantiPassword"
+            app:destination="@id/gantiPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gantiPasswordFragment"
+        android:name="com.example.uas_anmp_160420019.view.GantiPasswordFragment"
+        android:label="GantiPasswordFragment" >
+        <action
+            android:id="@+id/actionProfile"
+            app:destination="@id/itemUser" />
+    </fragment>
+</navigation>
